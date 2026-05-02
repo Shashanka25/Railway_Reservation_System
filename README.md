@@ -70,7 +70,19 @@ Open [http://localhost:3015](http://localhost:3015) with your browser to see the
 - `src/app/seat-selection/page.tsx`: The interactive seat mapper and trip summary sidebar, complete with preference selection.
 - `src/app/globals.css`: Global Tailwind directives and CSS variables.
 
-## License
+## 📄 License
 
-MIT License.
+MIT License
+
+---
+
+## 💡 Author
+
+Shashanka Biswas
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
 
