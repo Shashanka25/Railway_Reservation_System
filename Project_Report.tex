@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+\title{\textbf{IRCTE: Indian Railway Catering and Tourism Experience}\\ \Large Project Technical Report}
+\author{Development Team}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introduction}
+The IRCTE web application is a modern, premium railway reservation interface built from scratch. It aims to revitalize the online booking experience by introducing responsive design, dynamic client-side rendering, and contextual state management. 
+
+\section{System Architecture and Tech Stack}
+The project leverages a robust modern JavaScript stack:
+\begin{itemize}
+    \item \textbf{Next.js 16 (App Router)}: Provides the foundational routing structure and server/client component boundaries.
+    \item \textbf{React 19}: Used for managing complex user interfaces and state.
+    \item \textbf{Tailwind CSS 4}: A utility-first CSS framework enabling rapid, responsive, and cinematic UI design (glassmorphism, gradients).
+    \item \textbf{TypeScript}: Ensures type safety and mitigates runtime errors during development.
+\end{itemize}
+
+\section{Algorithmic Implementations Step-by-Step}
+
+\subsection{URL-based State Management}
+Instead of relying on heavy global state stores (like Redux), the application serializes user intent into URL parameters. 
+\\
+\textbf{Usage}: When a user selects ``New Delhi" to ``Varanasi" on \texttt{page.tsx}, the payload is encoded into \texttt{URLSearchParams}. The subsequent \texttt{search/page.tsx} reads this data via \texttt{useSearchParams()} to render correct destinations and propagate the chosen ``class" to the final seat selection layer.
+
+\subsection{Deterministic String Hashing for Distance Calculation}
+To simulate backend data fetching without an actual database, a DJB2-inspired string hashing algorithm is utilized to calculate train distances.
+\begin{lstlisting}[language=JavaScript, caption=Distance Hashing Algorithm]
+let hash = 0;
+const strForHash = fromCode + toCode;
+for (let i = 0; i < strForHash.length; i++) {
+    hash = strForHash.charCodeAt(i) + ((hash << 5) - hash);
+}
+const distance = 300 + (Math.abs(hash) % 1500);
+\end{lstlisting}
+\textbf{Usage}: This guarantees that a trip from NDLS to BSB always displays the same mock distance and travel duration across sessions.
+
+\subsection{Matrix Grid Rendering for Coach Layouts}
+The seat selection page (\texttt{seat-selection/page.tsx}) dynamically transforms its UI structure based on the selected travel class.
+\\
+\textbf{Usage}: 
+\begin{itemize}
+    \item \textbf{Chair Car (EC/CC)}: Modulo arithmetic \texttt{(i-1) \% 4} maps a 32-seat array into a 2x2 grid with a central aisle.
+    \item \textbf{Sleeper Classes (1A/2A/3A/SL)}: Modulo arithmetic \texttt{(i-1) \% 5} generates a 5-seat cross-section (Lower, Middle, Upper, Side Lower, Side Upper), which is then positioned visually using Tailwind's CSS Grid \texttt{col-start-X} classes to form a realistic Sleeper layout.
+\end{itemize}
+
+\subsection{Contextual Preference Engine}
+The preference dropdown is conditionally mapped based on the \texttt{isChairCar} boolean variable. If true, the system provides an array of \texttt{['Window', 'Aisle']}. If false, the array expands to \texttt{['Lower', 'Middle', 'Upper', 'Side Lower', 'Side Upper']}.
+
+\section{Conclusion}
+By utilizing modern React paradigms, dynamic URL routing, and clever algorithmic simulations for data generation and grid mapping, the IRCTE project successfully delivers a highly interactive, fluid, and scalable frontend architecture ready for backend API integration.
+
+\end{document}

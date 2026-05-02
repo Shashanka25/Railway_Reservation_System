@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#2e1500",
+                        "tertiary-fixed": "#88fc84",
+                        "surface-variant": "#e1e3e4",
+                        "inverse-primary": "#ffb77a",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-secondary-container": "#1b218f",
+                        "on-tertiary-fixed": "#002203",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-fixed-variant": "#005310",
+                        "surface-container-low": "#f3f4f5",
+                        "on-background": "#191c1d",
+                        "primary-fixed": "#ffdcc2",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#ffb77a",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#887364",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#006e18",
+                        "surface-tint": "#8f4e00",
+                        "on-secondary-fixed-variant": "#3239a3",
+                        "secondary-fixed-dim": "#bfc2ff",
+                        "on-primary-fixed-variant": "#6d3a00",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-container": "#ff9933",
+                        "on-surface-variant": "#554336",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary": "#8f4e00",
+                        "outline-variant": "#dbc2b0",
+                        "background": "#f8f9fa",
+                        "tertiary-container": "#57c958",
+                        "secondary": "#4b53bc",
+                        "on-primary-container": "#693800",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary-container": "#00500f",
+                        "secondary-container": "#8991fe",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#00006e",
+                        "tertiary-fixed-dim": "#6cde6b",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-xl shadow-slate-900/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 uppercase font-headline">
+                Vande Bharat Express
+            </div>
+<div class="hidden md:flex items-center space-gap-8">
+<nav class="flex gap-8 mr-12">
+<a class="text-orange-600 border-b-2 border-orange-600 pb-1 font-inter tracking-tight font-bold hover:text-orange-500 transition-colors duration-300" href="#">Schedules</a>
+<a class="text-slate-600 dark:text-slate-400 font-inter tracking-tight font-bold hover:text-orange-500 transition-colors duration-300" href="#">PNR Status</a>
+<a class="text-slate-600 dark:text-slate-400 font-inter tracking-tight font-bold hover:text-orange-500 transition-colors duration-300" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-slate-600" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-20 px-4 md:px-8 max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Booking Details -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Hero Section: Journey Recap -->
+<section class="relative h-48 rounded-xl overflow-hidden shadow-sm">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="a high-speed Vande Bharat train moving through a lush green Indian landscape with cinematic motion blur and morning mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0dXEoKhoNgUbZ8tH2QE_HyDx2OMO3qsR2vclefuBwEgu6G9HPK-axWMZ9nT9wSmkaW88JhWIFBRCda1iPo_LnYQ2JO2ONHZAF3LKN_eoed1CPoA-gRUnsLthWJB9kfXA2UVTxh9jbBggFBfHbg6Ie3PvaMB4rch_3qAGWT46BOWung_-cfwksnwgEffToZ0nZQilnORM087egr7HbxxaleBI6cuRel95ac7I_ay8MFGB4IfUm7awsLdA_oiWTQsQXa_R2z-oM9CAt"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/80 to-transparent flex flex-col justify-center px-8 text-white">
+<p class="label-md uppercase tracking-[0.2em] font-medium opacity-80">Review Journey</p>
+<h1 class="text-3xl md:text-4xl font-black tracking-tight mt-2">New Delhi ↔ Varanasi</h1>
+<p class="mt-2 text-lg font-light">Vande Bharat Exp (22436) • Executive Class • Oct 24, 2024</p>
+</div>
+</section>
+<!-- Passenger Details -->
+<div class="bg-surface-container-lowest rounded-xl p-8 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+<h2 class="text-2xl font-bold tracking-tight">Passenger Details</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">IRCTC User ID</label>
+<div class="relative">
+<input class="w-full bg-surface-container-highest border-none border-b-2 border-transparent focus:border-primary focus:ring-0 rounded-t p-4 text-on-surface" placeholder="Enter IRCTC ID" type="text"/>
+<span class="absolute right-4 top-4 text-primary text-sm font-semibold">Verify</span>
+</div>
+</div>
+</div>
+<div class="p-6 bg-surface-container-low rounded-lg border border-outline-variant/15 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+<div class="md:col-span-5 space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 p-3" placeholder="As per Govt ID" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Age</label>
+<input class="w-full bg-surface-container-lowest border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 p-3" placeholder="Years" type="number"/>
+</div>
+<div class="md:col-span-3 space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Preference</label>
+<select class="w-full bg-surface-container-lowest border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 p-3 appearance-none">
+<option>Window Seat</option>
+<option>Aisle Seat</option>
+<option>No Preference</option>
+</select>
+</div>
+<div class="md:col-span-2 flex justify-end">
+<button class="p-3 text-error hover:bg-error-container/20 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+                            ADD PASSENGER
+                        </button>
+</div>
+</div>
+<!-- Payment Methods -->
+<div class="bg-surface-container-lowest rounded-xl p-8 space-y-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+<h2 class="text-2xl font-bold tracking-tight">Payment Method</h2>
+</div>
+<!-- Payment Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- UPI -->
+<div class="md:col-span-3 p-6 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer relative group">
+<div class="flex justify-between items-start">
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="font-bold text-lg">UPI</span>
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-black rounded uppercase">Fastest</span>
+</div>
+<div class="flex gap-4 items-center">
+<img class="h-8 w-auto grayscale group-hover:grayscale-0 transition-all" data-alt="minimalist payment app icon representing mobile payments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD242NToo35Dl8OpDx0M4Wt2lpw1vvEpdMSJBLLQ4yZVlFIr32YTNEB6nWjpbwnQun-YTynrmMk0INeum7ad7aboxmTzkXnC1TfpuhI7XXngNy8PKqDIWPBHFm_OYQhjvVxKqtr_A5jHNVvRE3c6oiJLQAtM6rDejZ69mJXWJibAtgl4pXa-6-dzzuPpYq__oNEuM-5gKxjVyJ-jwJxBVAvQwqN7SNQdelBUSY1dd1C70CeQLDBeJ_he9w3ug7iaSMLaMclPtaifite"/>
+<span class="text-sm font-medium text-on-surface-variant">Paytm, Google Pay, PhonePe</span>
+</div>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-primary flex items-center justify-center">
+<div class="h-3 w-3 rounded-full bg-primary"></div>
+</div>
+</div>
+<div class="mt-6">
+<input class="w-full bg-surface-container-lowest border-none border-b-2 border-primary/30 focus:border-primary focus:ring-0 p-3" placeholder="Enter UPI ID (e.g. user@okaxis)" type="text"/>
+</div>
+</div>
+<!-- Cards -->
+<div class="p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer bg-surface-container-low group">
+<span class="material-symbols-outlined text-on-surface-variant mb-4 group-hover:text-primary transition-colors" data-icon="credit_card">credit_card</span>
+<h3 class="font-bold">Cards</h3>
+<p class="text-xs text-on-surface-variant mt-1">Debit &amp; Credit</p>
+</div>
+<!-- Net Banking -->
+<div class="p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer bg-surface-container-low group">
+<span class="material-symbols-outlined text-on-surface-variant mb-4 group-hover:text-primary transition-colors" data-icon="account_balance">account_balance</span>
+<h3 class="font-bold">Net Banking</h3>
+<p class="text-xs text-on-surface-variant mt-1">All Indian Banks</p>
+</div>
+<!-- Wallets -->
+<div class="p-6 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-all cursor-pointer bg-surface-container-low group">
+<span class="material-symbols-outlined text-on-surface-variant mb-4 group-hover:text-primary transition-colors" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h3 class="font-bold">Other Wallets</h3>
+<p class="text-xs text-on-surface-variant mt-1">Mobikwik, etc.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-4 sticky top-28">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl shadow-slate-900/5 overflow-hidden">
+<div class="bg-on-primary-fixed p-6 text-white">
+<h2 class="text-xl font-bold tracking-tight">Order Summary</h2>
+<p class="text-sm opacity-70">1 Ticket • Journey ID: VB-22436A</p>
+</div>
+<div class="p-6 space-y-6">
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Base Fare</span>
+<span class="font-medium text-on-surface">₹ 2,450.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Catering Charges</span>
+<span class="font-medium text-on-surface">₹ 480.00</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">GST (5%)</span>
+<span class="font-medium text-on-surface">₹ 146.50</span>
+</div>
+<div class="flex justify-between items-center text-sm text-tertiary">
+<span>Platform Discount</span>
+<span class="font-medium">-₹ 50.00</span>
+</div>
+</div>
+<div class="pt-6 border-t border-dashed border-outline-variant">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Total Amount</p>
+<p class="text-3xl font-black text-on-surface tracking-tighter">₹ 3,026.50</p>
+</div>
+<span class="material-symbols-outlined text-primary mb-1" data-icon="info" data-weight="fill" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+</div>
+<div class="space-y-3 pt-4">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold py-4 rounded-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-all flex justify-center items-center gap-2">
+                                PAY NOW
+                                <span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-[10px] text-center text-on-surface-variant leading-relaxed px-4">
+                                By clicking Pay Now, you agree to the Terms of Service and Refund Policy of Indian Railways.
+                            </p>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="bg-surface-container-low px-6 py-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary" data-icon="verified_user">verified_user</span>
+<span class="text-xs font-semibold text-on-surface-variant">Secure 256-bit SSL encrypted payment</span>
+</div>
+</div>
+<!-- Promo Section -->
+<div class="mt-6 p-6 rounded-xl bg-secondary-container/10 border border-secondary/20">
+<h4 class="font-bold text-secondary text-sm">Earn 3x Points</h4>
+<p class="text-xs text-secondary mt-1">Use your IRCTC SBI Card to earn travel rewards on this booking.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 dark:bg-black w-full py-12 px-8 border-t border-white/5">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:flex lg:justify-between items-start gap-8">
+<div class="space-y-4">
+<div class="text-lg font-bold text-white">Vande Bharat Express</div>
+<p class="text-slate-400 font-inter text-sm tracking-wide max-w-xs">Connecting India with speed, comfort, and the heritage of hospitality.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">Schedules</a>
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">PNR Status</a>
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">Seat Availability</a>
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">Station Info</a>
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">Support</a>
+<a class="text-slate-400 font-inter text-sm tracking-wide hover:text-orange-400 transition-colors" href="#">Privacy</a>
+</div>
+<div class="lg:text-right">
+<p class="text-slate-400 font-inter text-sm tracking-wide">© 2024 Indian Railways - Vande Bharat Express. High-Speed Heritage.</p>
+</div>
+</div>
+</footer>
+</body></html>
