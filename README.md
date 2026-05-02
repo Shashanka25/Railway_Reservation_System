@@ -57,20 +57,21 @@ First, install the project dependencies:
 ```bash
 npm install
 
-Next, run the development server:
-
-Bash
+Run the development server:
+```bash
 npm run dev
-Open http://localhost:3015 with your browser to see the result.
+```
 
-## 📂 Project Structure
-src/app/page.tsx — The stunning landing page featuring the hero section and initial search form.
+Open [http://localhost:3015](http://localhost:3015) with your browser to see the result.
 
-src/app/search/page.tsx — Search results page displaying available trains, dynamic journey durations, and class availability.
+## Project Structure
 
-src/app/seat-selection/page.tsx — The interactive seat mapper and trip summary sidebar, complete with preference selection.
+- `src/app/page.tsx`: The stunning landing page featuring the hero section and initial search form.
+- `src/app/search/page.tsx`: Search results page displaying available trains, dynamic journey durations, and class availability.
+- `src/app/seat-selection/page.tsx`: The interactive seat mapper and trip summary sidebar, complete with preference selection.
+- `src/app/globals.css`: Global Tailwind directives and CSS variables.
 
-src/app/globals.css — Global Tailwind directives and CSS variables.
+## License
 
-## 📄 License
-This project is licensed under the MIT License.
+MIT License.
+
