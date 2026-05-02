@@ -15,7 +15,6 @@
 
 <!-- Primary UI Screenshot -->
 <div align="center">
-  <img src="./assets/image_cec97c.png" alt="IRCTE Interface Showcase" style="border-radius: 8px; margin: 15px 0; max-width: 100%;" />
 </div>
 
 ## ✨ Features
